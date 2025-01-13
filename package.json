@@ -11,5 +11,8 @@
   "workspaces": [
     "packages/ui",
     "apps/*"
-  ]
+  ],
+  "devDependencies": {
+    "chromatic": "^11.22.2"
+  }
 }
