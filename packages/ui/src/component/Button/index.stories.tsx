@@ -19,6 +19,6 @@ export const ClickedButton: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByRole("button"));
-    await expect(canvas.getByText("ON")).toBeInTheDocument();
+    await expect(canvas.getByText("XX")).toBeInTheDocument();
   },
 };
