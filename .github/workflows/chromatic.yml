@@ -1,16 +1,5 @@
 name: "Chromatic APP"
-on:
-  pull_request:
-    types: [opened, reopened, synchronize, reopened]
-    branches:
-      - main
-    paths:
-      - "apps/app-1/**"
-  push:
-    branches:
-      - main
-    path:
-      - "apps/app-1/**"
+on: push
 jobs:
   chromatic:
     name: Run Chromatic
