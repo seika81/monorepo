@@ -1,4 +1,4 @@
-import { InputPrice } from "../../component/Price";
+import { InputPrice } from "../../component/InputPrice";
 
 export default function Page() {
   return <InputPrice />;
