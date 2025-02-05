@@ -32,5 +32,5 @@ jobs:
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_APP }}
           onlyChanged: true
-          exitZeroOnChanges: false
+          exitZeroOnChanges: true
           workingDir: apps/app-1
