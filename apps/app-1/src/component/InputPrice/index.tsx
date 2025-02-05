@@ -8,6 +8,7 @@ export const InputPrice = () => {
   const handleOnChange = (val: string) => setPrice(Number(val));
   return (
     <div>
+      test
       <input
         value={price}
         onChange={(event) => handleOnChange(event.target.value)}
