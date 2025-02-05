@@ -13,6 +13,6 @@
     "apps/*"
   ],
   "devDependencies": {
-    "chromatic": "^11.22.2"
+    "chromatic": "^11.25.2"
   }
 }
