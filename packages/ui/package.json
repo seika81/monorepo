@@ -31,6 +31,7 @@
   "scripts": {
     "build": "npx tsup",
     "test": "react-scripts test",
+    "prepare": "npm run build",
     "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_ca2ecc0a081ff0f"
