@@ -5,9 +5,10 @@ import { Price } from "@sample/ui";
 
 export const InputPrice = () => {
   const [price, setPrice] = useState(0);
-  const handleOnChange = (v: string) => setPrice(Number(v));
+  const handleOnChange = (val: string) => setPrice(Number(val));
   return (
     <div>
+      test
       <input
         value={price}
         onChange={(event) => handleOnChange(event.target.value)}
