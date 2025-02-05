@@ -2,7 +2,15 @@ name: "Chromatic"
 on:
   pull_request:
     types: [opened, reopened, synchronize, reopened]
-
+    branches:
+      - main
+    path:
+      - "packages/ui/**"
+  push:
+    branches:
+      - main
+    path:
+      - "packages/ui/**"
 jobs:
   chromatic:
     name: Run Chromatic
@@ -24,9 +32,4 @@ jobs:
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_UI }}
           workingDir: packages/ui
-      - name: Run App Chromatic
-        uses: chromaui/action@latest
-        with:
-          # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_APP }}
-          workingDir: apps/app-1
+
