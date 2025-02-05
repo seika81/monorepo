@@ -1,10 +1,10 @@
-name: "Chromatic"
+name: "Chromatic APP"
 on:
   pull_request:
     types: [opened, reopened, synchronize, reopened]
     branches:
       - main
-    path:
+    paths:
       - "apps/app-1/**"
   push:
     branches:
