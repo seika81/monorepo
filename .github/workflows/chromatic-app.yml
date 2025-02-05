@@ -27,7 +27,7 @@ jobs:
         # ⚠️ See your package manager's documentation for the correct command to install dependencies in a CI environment.
         run: npm ci
       - name: Run App Chromatic
-        uses: chromaui/action@latest
+        uses: chromaui/action@v3
         with:
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
