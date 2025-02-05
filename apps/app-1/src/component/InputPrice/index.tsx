@@ -8,8 +8,8 @@ export const InputPrice = () => {
   const handleOnChange = (val: string) => setPrice(Number(val));
   return (
     <div>
-      xyzk
       <input
+        data-testid ="write"
         value={price}
         onChange={(event) => handleOnChange(event.target.value)}
       />
