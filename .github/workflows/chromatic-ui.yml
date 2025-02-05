@@ -32,6 +32,6 @@ jobs:
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_UI }}
           onlyChanged: true
-          exitZeroOnChanges: true
+          exitZeroOnChanges: false
           workingDir: packages/ui
 
