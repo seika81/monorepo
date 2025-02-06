@@ -15,6 +15,6 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await userEvent.type(canvas.getByTestId('write'), "123");
-    await expect(canvas.getByText('123')).toBeInTheDocument();
+    await expect(canvas.getByText('¥123')).toBeInTheDocument();
   },
 };
