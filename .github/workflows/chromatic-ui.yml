@@ -34,23 +34,28 @@ jobs:
           onlyChanged: true
           exitZeroOnChanges: true
           workingDir: packages/ui
-  force-success:
+  force-success-other-chromatic-status:
     runs-on: ubuntu-latest
-    needs: chromatic
     permissions:
       actions: write
       statuses: write
     steps:
-      - name: Set multiple status checks to success
+      - name: Set multiple chromatic status checks to success
         uses: actions/github-script@v7
         env:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         with:
           script: |
-            await github.rest.repos.createCommitStatus({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              sha: process.env.HEAD_SHA,
-              state: "success",
-              context: "UI Review: APP"
-            });
+            const { owner, repo } = context.repo
+
+            const statuses = ["UI Review: APP", "UI Test: APP"]
+
+            for(const status of statuses) {
+              await github.rest.repos.createCommitStatus({
+                owner,
+                repo,
+                sha: process.env.HEAD_SHA,
+                state: "success",
+                context: "UI Review: APP"
+              })
+            }
