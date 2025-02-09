@@ -48,7 +48,7 @@ jobs:
           script: |
             const { owner, repo } = context.repo
 
-            const statuses = ["UI Review: APP", "UI Test: UI"]
+            const statuses = ["UI Review: APP", "UI Test: APP"]
 
             for(const status of statuses) {
               await github.rest.repos.createCommitStatus({
