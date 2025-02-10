@@ -8,6 +8,7 @@ export const InputPrice = () => {
   const handleOnChange = (val: string) => setPrice(Number(val));
   return (
     <div>
+      update:
       <input
         data-testid ="write"
         value={price}
